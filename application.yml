@@ -1,0 +1,23 @@
+spring:
+
+  application:
+    name: poc-example
+
+  cloud:
+
+    zookeeper:
+      config:
+        enabled: false #we are not using in zookeeper config
+
+      connect-string: *redacted*
+
+    config:
+      enabled: true
+      username: *redacted*
+      password: *redacted*
+      discovery:
+        enabled: true
+        serviceId: config-server
+  config:
+    import:
+      - "configserver:"
